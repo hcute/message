@@ -1,0 +1,36 @@
+quartz:
+  enabled: true
+server:
+  port: 9090
+spring:
+  application:
+    # Quartz调度中心
+    name: Spring-Quartz-Scheduler
+  datasource:
+    primary:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://47.111.239.37:3306/quartz
+      username: root
+      password: 123456
+    secondary:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://47.111.239.37:3306/quartz
+      username: root
+      password: 123456
+#      url: jdbc:oracle:thin:@10.82.21.193:1521/orcl
+#      username: eracloud_jx
+#      password: 1qaz2wsx
+#      driver-class-name: oracle.jdbc.OracleDriver
+    jpa:
+      show-sql: true
+      hibernate:
+        format_sql: true
+        primary-dialect: org.hibernate.dialect.MySQL55Dialect
+        secondary-dialect: org.hibernate.dialect.MySQL55Dialect
+#        second-dialect: org.hibernate.dialect.Oracle12cDialect
+
+# 不要乱用 只有5000 条测试短信，请慎重使用，最好拿到临海的配置填写后测试
+ali:
+  msg:
+    accessKeyId: LTAI4FrRTTbmn3HNwR8pEPYk
+    accessKeySecret: OeMfXTfaOIIAWUhLH6bveVdMjxMP4J
